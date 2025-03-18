@@ -1,0 +1,458 @@
+/* ==================== */
+/* General Styles */
+/* ==================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* ==================== */
+/* Header */
+/* ==================== */
+header {
+  background: url('../images/bg-pattern-intro-desktop.svg'), hsl(13, 100%, 72%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0px 0px 0px 100px;
+  position: relative;
+  width: 100%;
+}
+
+/* Header Container */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ==================== */
+/* Navbar */
+/* ==================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.logo img {
+  height: 30px;
+}
+
+/* Menu Toggle (Mobile) */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: hsl(356, 100%, 66%);
+}
+
+/* ==================== */
+/* Dropdown Styles */
+/* ==================== */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  list-style: none;
+  min-width: 160px;
+}
+
+.dropdown li {
+  padding: 8px 16px;
+}
+
+.dropdown li a {
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  display: block;
+  padding: 8px;
+}
+
+.dropdown li a:hover {
+  color: hsl(208, 49%, 24%);
+}
+
+/* Show dropdown on hover (Desktop) */
+.dropdown-container:hover .dropdown {
+  display: block;
+}
+
+/* ==================== */
+/* Responsive Design */
+/* ==================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block;
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 20px;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .dropdown {
+      position: relative;
+      display: none;
+  }
+
+  .dropdown-container.active .dropdown {
+      display: block;
+  }
+}
+
+
+
+/* ==================== */
+/* Future Platform Section */
+/* ==================== */
+
+.future-platform {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 80px 120px;
+}
+
+.future-platform .section-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Content Layout */
+.future-platform .content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Text Content */
+.future-platform .text-content {
+  max-width: 50%;
+  text-align: left;
+}
+
+.future-platform .feature {
+  margin-bottom: 30px;
+}
+
+.future-platform .feature-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.future-platform .feature-description {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Feature Image */
+.future-platform .feature-image {
+  width: 50%;
+  max-width: 500px;
+}
+
+/* ==================== */
+/* Future Platform Section - Responsive */
+/* ==================== */
+
+@media (max-width: 768px) {
+  .future-platform {
+    padding: 40px 20px; /* Adjust padding */
+  }
+
+  .future-platform .content-container {
+    flex-direction: column-reverse; /* Move image to the top */
+    text-align: center;
+    gap: 20px;
+  }
+
+  .future-platform .feature-image {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .future-platform .text-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .future-platform .feature-title {
+    font-size: 22px; /* Reduce font size */
+  }
+
+  .future-platform .feature-description {
+    font-size: 14px;
+  }
+}
+
+
+/* ==================== */
+/* Infrastructure Section */
+/* ==================== */
+
+.infrastructure{
+    background: hsl(237, 17%, 21%);
+  background-image: url('../images/bg-pattern-circles.svg');
+  background-position: left;
+  background-size: 55%;
+  background-repeat: no-repeat;
+  height: 300px;
+  padding: 20px 120px;
+  border-bottom-left-radius: 90px;
+  border-top-right-radius: 90px;
+  margin-bottom: 30px;
+}
+
+/* Content Layout */
+
+.infrastructure .content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 150px;
+}
+
+/* Infrastructure Image */
+.infrastructure .infrastructure-image {
+  position: relative;
+    width: 50%;
+    max-width: 400px;
+    top: -70px;
+}
+
+/* Text Content */
+.infrastructure .text-content {
+  max-width: 50%;
+  text-align: right;
+}
+
+.infrastructure .feature-title{
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.infrastructure .feature-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* ==================== */
+/* Infrastructure Section - Responsive */
+/* ==================== */
+
+@media (max-width: 768px) {
+  .infrastructure {
+    height: auto; /* Allow height to adjust */
+    padding: 40px 20px; /* Reduce padding */
+    text-align: center;
+    background-size: 100%; /* Adjust background size */
+    border-radius: 50px; /* Reduce border radius */
+  }
+
+  .infrastructure .content-container {
+    flex-direction: column-reverse; 
+    text-align: center;
+    gap: 20px;
+  }
+
+  .infrastructure .infrastructure-image {
+    width: 100%; 
+    max-width: 300px;
+    top: -70px; 
+  }
+
+  .infrastructure .text-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .infrastructure .feature-title {
+    font-size: 22px; /* Reduce font size */
+  }
+
+  .infrastructure .feature-description {
+    font-size: 14px;
+  }
+}
+
+
+/* ==================== */
+/* Features Section */
+/* ==================== */
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 120px;
+  background: #f5f5f5;
+}
+
+/* Feature Image */
+.features .feature-image {
+  width: 50%;
+  max-width: 500px;
+}
+
+/* Text Content */
+.features .text-content {
+  max-width: 50%;
+  text-align: left;
+}
+
+.features .feature {
+  margin-bottom: 30px;
+}
+
+.features .feature-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.features .feature-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* ==================== */
+/* Responsive Design */
+/* ==================== */
+
+@media (max-width: 1024px) {
+  .future-platform,
+  .features {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 40px;
+  }
+
+  .future-platform .text-content,
+  .future-platform .feature-image,
+  .features .text-content,
+  .features .feature-image {
+    max-width: 100%;
+    width: 80%;
+  }
+
+  .future-platform .text-content,
+  .features .text-content {
+    text-align: center;
+  }
+
+  .infrastructure {
+    padding: 40px 30px;
+    background-position: left top;
+  }
+
+  .infrastructure .content-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .infrastructure .text-content {
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .infrastructure .infrastructure-image {
+    position: relative;
+    left: 0;
+    top: auto;
+    transform: none;
+    width: 50%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .future-platform,
+  .features {
+    padding: 50px 20px;
+  }
+
+  .features .feature-title,
+  .future-platform .feature-title {
+    font-size: 22px;
+  }
+
+  .features .feature-description,
+  .future-platform .feature-description {
+    font-size: 15px;
+  }
+
+  .infrastructure {
+    padding: 30px 20px;
+  }
+
+  .infrastructure .infrastructure-image {
+    width: 60%;
+    max-width: 200px;
+  }
+}
+
